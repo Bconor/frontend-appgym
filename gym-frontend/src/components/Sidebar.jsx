@@ -8,6 +8,8 @@ const Sidebar = () => {
       <nav className="mt-4">
         <Link to="/home" className="block py-2 hover:bg-gray-700">Inicio</Link>
         <Link to="/progress" className="block py-2 hover:bg-gray-700">Progreso</Link>
+        <Link to="/manage-exercises" className="block py-2 hover:bg-gray-700">Ejercicios</Link>
+        <Link to="/weekly-progress" className="block py-2 hover:bg-gray-700">Progreso Semanal</Link>
       </nav>
     </div>
   );

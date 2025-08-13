@@ -50,7 +50,7 @@ const SignUp = () => {
       if (response?.success) { // Asumiendo que tu API responde con { success: true } en caso de éxito
         toast.success(response.message || 'Registro exitoso');
         // Redirige al usuario a la página de login u otra página relevante
-        navigate('/login');
+        navigate('/verify-email');
       } else {
         // Si la respuesta no indica éxito pero no lanza una excepción
         throw new Error(response?.message || 'Respuesta inesperada del servidor');

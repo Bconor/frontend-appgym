@@ -9,8 +9,11 @@ import LayoutWithSidebar from './layouts/LayoutWithSidebar'; // <-- Importa el L
 import Home from './pages/Home';
 import Progress from './pages/ProgressChart'; // O el nombre correcto de tu archivo de progreso
 import Login from './pages/Login';
-import SignUp from './pages/SignUp';
-// ... otras páginas ...
+import SignUp from './pages/SignUp';7
+import VerifyEmail from './pages/VerifyEmail'
+import ManageExercises from './pages/ManageExercises';
+import WeeklyRoutines from './pages/WeeklyRoutines';
+
 
 const App = () => {
   return (
@@ -38,8 +41,26 @@ const App = () => {
             </LayoutWithSidebar>
           }
         />
-         {/* ... otras rutas que usen el Layout ... */}
-
+         <Route
+         path="/verify-email"
+         element={<VerifyEmail />
+             }
+         />
+         <Route
+         path="/manage-exercises"
+         element={<LayoutWithSidebar>
+          <ManageExercises />
+         </LayoutWithSidebar>
+             }
+         />
+          <Route
+          path="/weekly-progress"
+          element={
+            <LayoutWithSidebar> {/* Envuelve la página con el Layout */}
+              <WeeklyRoutines /> {/* Pasa el componente WeeklyProgress como children */}
+            </LayoutWithSidebar>
+          }
+        />
       </Routes>
       <ToastContainer />
     </Router>
